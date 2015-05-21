@@ -25,7 +25,7 @@ See what the theme looks like:
 
 *Coming Soon*
 
-##### Changelog available [here](mckinley/changelog.md)
+##### Changelog available [here](changelog.md)
 
 License
 ------------
