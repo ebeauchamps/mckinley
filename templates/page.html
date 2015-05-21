@@ -1,0 +1,53 @@
+<div class='absolutehead'>
+ 		<section class='mastheader' style="background-image: url('{{ if header_img }} {{ header_img }} {{ endif }}')">
+ 		<div class='darker'></div>
+ 		<div class='spacer'>
+ 		</div> <!-- ensures causes and effects title shows in middle of screen -->
+ 		<div class='posthead'> <!-- sets proper distance back up from middle of s-->
+	    	<h1 class="posttitle"><a title="permalink to {{title}}"href="{{ url }}">{{ title }}</a></h1>
+	    	<h3 class='captioned'>{{ if captioned }} {{ captioned }} {{ endif }}</h3>
+	    	</div>
+	    	<div class='backwardo'><a href='{{ homepage }}#latest'>&larr; back to main <i class="fa fa-dot-circle-o"></i></a></div>
+
+			 		<div id='beginreading'><a href='{{url}}#begin'>begin reading<span class='fa fa-caret-square-o-down post'></span></a></div>
+ 		</div>
+		</section>
+
+</div>
+ <div class='spacer'>
+ </div>
+ <div>
+ <p name='begin'class='postwords'></p>
+		    <p class='postdate'></p>
+		    <a id='clearit'href='http://www.jamescampbell.us/about'><div id='circularpost' style="background-image:url(/assets/img/blog/profile.jpg)"></div></a>
+ </div>
+
+
+  <div class='singlepostmain'>
+  <div class="block entry">
+  {{ content }}
+  </div>
+  </div>
+    <div title='using font-awesome bootstrap font icons for bolts'class='post-end'><h3><i class="fa fa-bolt"></i><i class="fa fa-bolt"></i><i class="fa fa-bolt"></i></h3></div>
+
+<div class='postfooter'>
+{{ entries:previous folder="blog" }}
+    {{ if !no_results }}
+        <p id='previously'>Next Post: <a href="{{ url }}">{{ title }} &#x2799;</a></p>
+    {{ endif }}
+{{ /entries:previous }}
+<!-- no about me for pages
+<section class="postbottom">
+
+</section>
+-->
+<section class='thisnav'>{{ theme:partial src="nav" }}</section>
+{{ if show_comments }}
+<div class="block">
+  <h3>Leave Your Comments</h3>
+  {{ disqus:comments account="{ disqus_account }" }}
+</div>
+{{ endif }}
+</div>
+
+<script type="text/javascript" src="/_themes/mckinley/js/mckinley.js"></script>

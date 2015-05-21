@@ -1,0 +1,49 @@
+<script type="text/javascript" src="https://www.jamescampbell.us/_themes/mckinley/js/mckinley.js"></script>
+ <section class="span2">
+        <p class="site-name"><a href="{{ homepage }}">{{ _site_name }}</a></p>
+        <section class='thisnav'>{{ theme:partial src="nav" }}</section>
+        <!-- {{ theme:partial src="category-list" }} -->
+      </section>
+{{ entries:listing folder="blog" limit="{home_blog_items}" }}
+ <div class="block entry">
+    <header>
+      <h2 class="entry-title"><a href="{{ url }}">{{ title }}</a></h2>
+      <p class="entry-date"> {{ datestamp format="F jS, Y" }}</p>
+    </header>
+    {{ content|widont }}
+
+    {{ if categories }}
+    <p class="entry-meta"> Filed under {{ categories_url_list }}</p>
+    {{ endif }}
+  </div>
+{{ /entries:listing }}
+
+<!--<h6 class="center">Next on <a href="/calendar">the Calendar</a></h6>
+{{ entries:listing from="calendar" show_future="yes" sort_dir="asc" limit="{home_calendar_items}" }}
+{{ if no_results }}
+<div class="event block">
+  <h3>No events on the horizon.</h3>
+</div>
+{{ else }}
+ <div class="event block push-down">
+    <div class="event-date">
+      <span class="month"> {{ date format="M" }}</span>
+      <span class="day"> {{ date format="j" }}</span>
+    </div>
+    <div class="event-details">
+      <h3 class="event-title">{{ title }}</h3>
+      {{ content|widont }}
+    </div>
+  </div>
+{{ endif }}
+{{ /entries:listing }}-->
+{{ entries:pagination folder="blog" limit="10"}}
+<div class="pagination">
+  {{ if previous_page }}
+    <a href="{{ previous_page }}">Previous Page</a>
+  {{ endif }}
+  {{ if next_page }}
+    <a href="{{ next_page }}">Next Page</a>
+  {{ endif }}
+</div>
+{{ /entries:pagination }}

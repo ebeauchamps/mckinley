@@ -1,0 +1,86 @@
+<!-- default.html file is before here -->
+<section><!-- full screen header -->
+<div class='absolutehead'> <!-- absolutehead resets the margin, height, width -->
+ 		<div class='mastheader' style="background-image: url('{{ if header_img }} {{ header_img }} {{ endif }}');"> <!-- this is where we set the header_img from post.yaml in config/fieldsets -->
+ 		<div class='darker'></div><!-- this makes the background image darker -->
+ 		<div class='spacer'></div> <!-- ensures causes and effects title shows in middle of screen -->
+ 			<div class='posthead'> <!-- sets proper distance back up from middle of s-->
+
+ 				<h1 class="posttitle">
+ 					<a title="permalink to {{title}}" href="{{ url }}">{{ title }}</a><a id="causes" href="#begin"></a>
+ 				</h1>
+ 				<p class="postdate">{{ datestamp format="n-j-Y" }}. Filed under {{ if categories }}
+		    {{ categories_url_list }}
+		    {{ endif }}</p>
+		    <h3 class='captioned'>{{ if captioned }} {{ captioned }} {{ endif }}</h3>
+		    </div>
+		    <div class='backwardo'><a href="{{ homepage }}">&larr; back to main <i class="fa fa-dot-circle-o"></i></a></div>				<div id='beginreading'><a href='{{url}}#begin'>begin reading<span class='fa fa-caret-square-o-down post'></span></a></div>
+ 		</div>
+		</div>
+
+</div>
+ <div class='spacer'>
+ </div>
+ </section>
+ <div><!-- I named the postwords bar begin so that the jquery from the arrow above will scroll to this location -->
+		    <p id='begin' title='average adult reads 250 words per minute, I round up to nearest minute' class='postwords'> {{ if categories_list!='photo journal' }} {{ content|word_count }} words{{ if readtime }}{{ readtime }}{{ endif }}{{ if content|word_count > 249 }}. A {{ content|word_count|/:250|round:0 }}-minute read.  {{ endif }} {{ endif }}</p>
+		  <!--   <div id='yoggrtad'>
+<!-- Start Yoggrt.com Ad Code
+<script type="text/javascript" src="http://cdn.yoggrt.com/yoggrt.js?legacyid=1293913&zoneid=1353&key=9be8ed990dff6de72f0643c06152f091&serve=C6SD52Y&placement=jamescampbellus" id="_yoggrt_js"></script>
+<!-- End Yoggrt.com Ad Code
+  </div>-->
+		    <a id='clearit' title='by James Campbell' href='http://www.jamescampbell.us/about'><div id='circularpost' style="background-image:url(/assets/img/blog/profile.jpg)"></div></a>
+ </div>
+
+
+
+  <div class='singlepostmain'>
+  <div class="block entry">
+  {{ content }}
+  </div>
+  </div>
+  <div title='using font-awesome bootstrap font icons for bolts' class='post-end'><h3><i class="fa fa-bolt"></i><i class="fa fa-bolt"></i><i class="fa fa-bolt"></i></h3></div>
+
+<div class='postfooter'>
+{{ entries:previous folder="blog" }}
+    {{ if !no_results }}
+        <p id='previously'>Next Post: <a href="{{ url }}">{{ title }} &#x2799;</a></p>
+    {{ endif }}
+{{ /entries:previous }}
+
+
+{{ if show_comments }}
+<div class="block">
+  <h3>Leave Your Comments</h3>
+  {{ disqus:comments account="{ disqus_account }" }}
+</div>
+{{ endif }}
+</div>
+
+<section class='thisnav'>{{ theme:partial src="nav" }}</section>
+
+<div class="block related-entries">
+<h3>You may also like:</h3>
+<div class="home__stories">
+{{ entries:listing folder="blog" conditions="categories:{ categories_option_list },url:not {page_url}" limit="3" sort_by="random" }}
+
+{{ if total_results }}
+
+
+    <article class="home__single" style="background-image:url({{ header_img }})">
+
+    <a class='home__a' href="{{ url }}">
+                   <h3 class="thumbtitle">{{ title }}</h3>
+                <h3 class='thumbpost'>{{ datestamp format="n-j-Y" }}</h3><!--, filed under {{ if categories }} {{ categories_url_list }}{{ endif }} -->
+     <!--{{ if categories_list!='photo journal' }}<h3 class='counts'> {{ content|word_count }} words  {{ if content|word_count > 249 }}  &curren; {{ content|word_count|/:250|round:0 }} minute read {{ endif }} {{ endif }}</h3>	-->
+	</a>
+	</article>
+{{ endif }}
+{{ /entries:listing }}
+ </div>
+</div>
+<section class="postbottom">
+  {{ theme:partial src="me" }} <!-- has div class 'mee' -->
+</section>
+<script type="text/javascript" src="/_themes/mckinley/js/mckinley.js"></script>
+

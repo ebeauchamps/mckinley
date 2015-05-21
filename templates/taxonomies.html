@@ -1,0 +1,53 @@
+<script type="text/javascript" src="http://www.jamescampbell.us/_themes/mckinley/js/mckinley.js"></script>
+ <link rel="stylesheet" type="text/css" href="http://www.jamescampbell.us/_themes/mckinley/css/font.css" media="all">
+<?php
+  $browser = strpos($_SERVER['HTTP_USER_AGENT'],"iPhone");
+    if ($browser == true){
+    $browser = 'iphone';
+  }
+?>
+<?php if($browser == 'iphone'){ ?>
+  <link rel="stylesheet" type="text/css" href="http://www.jamescampbell.us/_themes/mckinley/css/mobile.css" media="all">
+<?php } ?>
+{{ if taxonomy_slug }}
+<div class="block">
+  <h1>Blog Category: <em>{{ taxonomy_slug }}</em></h1>
+</div>
+
+{{ entries:listing folder="blog" limit="20" taxonomy="true" }}
+ <div class="block entry">
+    <header>
+      <h2 class="entry-title"><a href="{{ url }}">{{ title }}</a></h2>
+      <p class="entry-date"> {{ datestamp format="F jS, Y" }}</p>
+    </header>
+    {{ content }}
+    
+    {{ if categories }}
+    <p class="entry-meta"> Filed under {{ categories_url_list }}</p>
+    {{ endif }}
+  </div>
+{{ /entries:listing }}
+
+{{ entries:pagination folder="blog" limit="20" taxonomy="yes" }}
+<div class="pagination">
+  {{ if previous_page }}
+    <a href="{{ previous_page }}">Previous Page</a>
+  {{ endif }}
+  {{ if next_page }}
+    <a href="{{ next_page }}">Next Page</a>
+  {{ endif }}
+</div>
+{{ /entries:pagination }}
+
+{{ else }}
+
+<div class="row">
+  <div class="span12">
+      <h1>Categories</h1>
+      {{ content }}
+    </div>
+</div>
+
+{{ endif }}
+ {{ theme:partial src="me" }}
+<section class='thisnav'>{{ theme:partial src="nav" }}</section>

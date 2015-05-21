@@ -1,0 +1,76 @@
+<div class='absolutehead'>
+ 		<section class='mastheader' style="background-image: url('{{ if header_img }} {{ header_img }} {{ endif }}')">
+ 		<div class='darker'></div>
+ 		<div class='spacer'>
+ 		</div> <!-- ensures causes and effects title shows in middle of screen -->
+ 		<div class='posthead'> <!-- sets proper distance back up from middle of s-->
+	    	<h1 class="posttitle"><a title="permalink to {{title}}"href="{{ url }}">{{ title }}</a></h1>
+	    	<h3 class='captioned'>{{ if captioned }} {{ captioned }} {{ endif }}</h3>
+	    	<h3 class='backwardo'><a href='{{ homepage }}#latest'>&larr; back to main <i class="fa fa-dot-circle-o"></i></a></h3>
+			 		</div>
+ 		</div>
+		</section>
+		
+</div>
+ <div class='spacer'>
+ </div>
+ <div>
+		    <p class='postdate'></p>
+		    <a id='clearit'href='http://www.jamescampbell.us/about'><div id='circularpost' style="background-image:url(/assets/img/blog/profile.jpg)"></div></a>
+ </div>
+ 
+ 
+  <div class='singlepostmain'>
+  <div class="block entry">
+  {{ content }}
+  {{ email_form subject="Contact Form" to="james@jamescampbell.us" required="name" }}
+    {{ if error}}
+        <h1>Error</h1>
+        <ul>
+        {{ errors }}
+            <li>{{error}}</li>
+        {{ /errors }}
+        </ul>
+    {{ endif }}
+
+    {{ if success }}
+        <p>Your message has been sent!</p>
+    {{ else }}
+        <div>
+            <label for="name">Your Name:</label>
+            <input type="text" name="name" id="name" value="Bill">
+        </div>
+        <div>
+            <label for="from">Your Email:</label>
+            <input type="text" name="from" id="from" value="you@you.com">
+        </div>
+        <div>
+            <label for="msg_header">Message: </label>
+            <input type="text" name="msg_header" id="msg_header" value="hello!">
+        </div>
+        <div><input type="submit"></div>
+    {{ endif }}
+{{ /email_form }}
+  </div>
+  </div>
+    <div title='using font-awesome bootstrap font icons for bolts'class='post-end'><h3><i class="fa fa-bolt"></i><i class="fa fa-bolt"></i><i class="fa fa-bolt"></i></h3></div>
+  
+<div class='postfooter'>
+{{ entries:previous folder="blog" }}
+    {{ if !no_results }}
+        <p id='previously'>Next Post: <a href="{{ url }}">{{ title }} &#x2799;</a></p>
+    {{ endif }}
+{{ /entries:previous }}
+<section class="postbottom">
+<!-- no about me for pages -->
+</section>
+<section class='thisnav'>{{ theme:partial src="nav" }}</section>
+{{ if show_comments }}
+<div class="block">
+  <h3>Leave Your Comments</h3>
+  {{ disqus:comments account="{ disqus_account }" }}
+</div>
+{{ endif }}
+</div>
+
+<script type="text/javascript" src="http://www.jamescampbell.us/_themes/mckinley/js/mckinley.js"></script> 

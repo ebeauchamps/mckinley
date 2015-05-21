@@ -1,0 +1,79 @@
+<!-- absolutehead is the basis for the entire setup of full screen content -->
+<div class='absolutehead'>
+<!--<a href="http://www.jamescampbell.us"><img id='home-button'src="http://d1r5nr1emc2xy5.cloudfront.net/pics/38022" src="http://d1r5nr1emc2xy5.cloudfront.net/pics/38022?h=500&w=500"/></a>-->
+
+
+<!-- mastheader is where we set the background image, may want to change to random rotating image eventually -->
+ 	<section class='mastheader' style="background-image: url('assets/img/blog/fever/-nyc-skyline-portra-tint1.jpg')">
+ 		<div class='mainnamer'> <!-- sets proper distance back up from middle of screen for site-title-->
+        	<h1 class="site-name">
+        	<a id='causes' title='click to refresh screen with random background image' href='{{ homepage }}'><span class='sitenamespan'>caus</span><span class='sitenamespan mirror animated flip'>e</span><span class='sitenamespan'>s & </span> <span class='sitenamespan mirror animated flip'>e</span><span class='sitenamespan'>ff</span><span class='sitenamespan mirror animated flip'>e</span><span class='sitenamespan'>cts</span></a><a href='#latest'><span class='fa fa-caret-square-o-down'></span></a>
+        	<!--{{ _site_name }}-->
+        	</h1>
+       </div>
+    </section>
+</div>
+
+ 	<section class='about-me'>
+    	<div class='spacer'><!-- 'spacer' div moves the following content to the middle of the screen (works on any screen and awesome) -->
+    	</div>
+		<div class='headnamer'>
+			<a href='about'> <!-- link to about me page when click / touch on my face -->
+			<div id='circularpost' style="background-image:url(/assets/img/blog/profile.jpg)"></div> <!-- set your profile image -->
+			<!-- circular profile image change this to set your own-->
+			</a>
+			<!-- {{ theme:partial src="me" }} about me blurb using '.mee' div class -->
+	 	</div>
+ 	</section>
+ 	<div class='latest-title'>
+		 	<a name='latest'>The Latest</a>
+ 	</div>
+
+<div class="home__stories"><!-- latest post thumbs start here -->
+	        <!-- {{ theme:partial src="category-list" }} -->
+	{{ entries:listing folder="blog" limit="9" }}
+	    <article class="home__single" style="background-image:url({{ header_img }})"><!-- set header_img in fieldlist config file -->
+	    <a class='home__a' href="{{ url }}">
+
+				<div class="home__link">
+                <h3 class="thumbtitle">{{ title }}</h3>
+                <!--<h3 class='thumbpost'>{{ datestamp format="n-j-Y" }}</h3>--><!--, filed under {{ if categories }} {{ categories_url_list }}{{ endif }} -->
+     <!--{{ if categories_list!='photo journal' }}<h3 class='counts'> {{ content|word_count }} words.  {{ if content|word_count > 249 }} {{ content|word_count|/:250|round:0 }} minute read. {{ endif }} {{ endif }}</h3>-->
+              	</div>
+		</a>
+	    </article>
+	{{ /entries:listing }}
+</div>
+
+<div class="pagination">
+	{{ entries:pagination folder="blog" limit="9"}}
+
+	  {{ if next_page }}
+	    <a rel="next" href="{{ next_page }}">&lt; Older Posts</a>
+	  {{ endif }}
+
+	  {{ if previous_page }}
+	    <a rel="prev" href="{{ previous_page }}">Newer Posts ></a>
+	  {{ endif }}
+
+
+
+	{{ /entries:pagination }}
+
+</div>
+
+<div id="homefoot">
+ <section class='thisnav'>{{ theme:partial src="nav" }}</section>
+</div>
+<script type="text/javascript" src="/_themes/mckinley/js/mckinley.js"></script>
+<!-- the below script allows for random background images on home page. Please change 1-4 images to your choice-->
+ <script type="text/javascript">
+   $(function() {
+    var wwidth = $(window).width();
+    var hheight = $(".mastheader").height();
+    var images = ['1.jpg', '2.jpg', '3.jpg', '4.jpg']; // any image files you want to use here!
+    var rando = images[Math.floor(Math.random() * images.length)]; // make the randomness!
+    $('.mastheader').css({'background-image': 'url({{ theme:img }}' + rando + ')'});
+
+   });
+  </script>
