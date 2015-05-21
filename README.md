@@ -25,7 +25,7 @@ See what the theme looks like:
 
 *Coming Soon*
 
-##### Changelog available [here](http://github.com/jamesacampbell/statamic-theme-mckinley/changelog.md)
+##### Changelog available [here](http://github.com/jamesacampbell/mckinley/changelog.md)
 
 License
 ------------
