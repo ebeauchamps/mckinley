@@ -17,9 +17,14 @@ See what the theme looks like:
 * [Regular Page](https://jamescampbell.us/about)
 
 ### Installation
-```
-*coming soon*
-```
+1. Clone this repo into your _themes directory or download and unzip to the _themes directory. Final structure should be _themes/mckinley.
+2. Change you config in _config/settings.yaml to use the new theme by changing the active theme name to mckinley.
+3. Profit
+
+### Customization of settings
+
+*Coming Soon*
+
 ##### Changelog available [here](http://github.com/jamesacampbell/statamic-theme-mckinley/changelog.md)
 
 License
