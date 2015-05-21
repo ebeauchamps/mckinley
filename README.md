@@ -11,9 +11,13 @@ Medium inspired theme for Statamic [by @jamescampbell](http://twitter.com/jamesc
 
 > Uses very minimal jquery to get height/width of window, otherwise vanilla HTML5 / CSS3. NO BLOAT!
 
-### Example post
+### Examples
 See what the theme looks like:
+
+#### Example Blog Post
 * [Blog Post Page](https://jamescampbell.us/blog/on-photography-and-joy)
+
+#### Example Page
 * [Regular Page](https://jamescampbell.us/about)
 
 ### Installation
