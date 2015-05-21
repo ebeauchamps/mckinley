@@ -13,14 +13,11 @@ Medium inspired theme for Statamic [by @jamescampbell](http://twitter.com/jamesc
 
 ### Examples
 See what the theme looks like:
-
-#### Example Blog Post
 * [Blog Post Page](https://jamescampbell.us/blog/on-photography-and-joy)
-
-#### Example Page
 * [Regular Page](https://jamescampbell.us/about)
 
 ### Installation
+```
 *coming soon*
 ```
 ##### Changelog available [here](http://github.com/jamesacampbell/statamic-theme-mckinley/changelog.md)
