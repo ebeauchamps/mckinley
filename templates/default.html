@@ -31,7 +31,7 @@
 
 <div class="home__stories"><!-- latest post thumbs start here -->
 	        <!-- {{ theme:partial src="category-list" }} -->
-	{{ entries:listing folder="blog" limit="9" }}
+	{{ entries:listing folder="blog" limit="{ home_blog_items }" }}
 	    <article class="home__single" style="background-image:url({{ header_img }})"><!-- set header_img in fieldlist config file -->
 	    <a class='home__a' href="{{ url }}">
 
@@ -46,7 +46,7 @@
 </div>
 
 <div class="pagination">
-	{{ entries:pagination folder="blog" limit="9"}}
+	{{ entries:pagination folder="blog" limit="{ home_blog_items }" }}
 
 	  {{ if next_page }}
 	    <a rel="next" href="{{ next_page }}">&lt; Older Posts</a>

@@ -4,25 +4,35 @@
 
 
 			<ul class="social-new">
+				{{ if twitter_on }}
 				<li>
-					<a class="fa fa-circle-thin fa-twitter" href="https://twitter.com/intent/user?screen_name=jamescampbell">
+					<a class="fa fa-circle-thin fa-twitter" href="https://twitter.com/intent/user?screen_name={{ twitter_name }}">
 					</a>
 				</li>
+				{{ endif }}
+				{{ if tumblr_on }}
 				<li>
-					<a class="fa fa-circle-thin fa-tumblr" href="http://tumblr.jamescampbell.us">
+					<a class="fa fa-circle-thin fa-tumblr" href="{{ tumblr_link }}"> <!-- set this in the theme.yaml in the mckinley folder -->
 					</a>
 				</li>
+				{{ endif }}
+				{{ if instagram_on }}
 				<li>
-					<a class="fa fa-instagram" href="http://instagram.com/jamesanthonycampbell">
+					<a class="fa fa-instagram" href="{{ instagram_link }}">
 					</a>
 				</li>
+				{{ endif }}
+				{{ if feed_on }}
 				<li>
-					<a class="fa fa-rss" href="http://feed.j1c.us/jamescampbell">
+					<a class="fa fa-rss" href="{{ feed_link }}">
 					</a>
 				</li>
+				{{ endif }}
 			</ul>
 			<div class='iam'>
-			<div id="copyrighter" >All Rights Reserved James Campbell. All content subject to Copyright. Details <a href="https://www.jamescampbell.us/copyright-info">here</a>.</div>
+				{{ if copyright_on }}
+			<div id="copyrighter" >{{ copyright_info }} <a href="{{ copyright details link }}"> details here</a>.</div>
+				{{ endif }}
 			<!--
 			<p><iam title='...so that they can stop paying people to catch fish for them'>I teach people how to fish.
 			<div class='fish'><img src='/assets/img/blog/fish.png'>
