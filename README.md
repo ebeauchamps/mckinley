@@ -1,5 +1,5 @@
 ## McKinley Theme ##
->v.1.0
+>v.1.1
 
 Medium inspired theme for Statamic [by @jamescampbell](http://twitter.com/jamescampbell), see it in action over at James's site [jamescampbell.us](https://jamescampbell.us).
 
