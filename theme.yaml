@@ -1,8 +1,8 @@
-###########################################################################################
+#######################################################################################################
 #
-#  THEME VARIABLES
+#  THEME VARIABLES ---- ENJOY ---- QUESTIONS? @JAMESCAMPBELL on TWITTER or JAMES@JAMESCAMPBELL.US EMAIL
 #
-###########################################################################################
+#######################################################################################################
 
 # Theme name
 theme_name: McKinley
@@ -37,3 +37,7 @@ feed_link: http://feed.j1c.us/jamescampbell
 copyright_on: true
 copyright_info: All Rights Reserved James Campbell. All content subject to Copyright.
 copyright_details_link: https://jamescampbell.us/copyright-info
+
+# me section displayed at bottom before menu
+mee: true
+mee_content: Hello. I am <a class="abouta" rel="author" href="https://www.jamescampbell.us/about">James Campbell</a>. I do things. This is where I share solutions I've found and projects I am working on. Subscribe to <a class="abouta" target="_blank" href="http://feedpress.it/e/mailverify?feed_id=jamescampbell">every new post</a> or <a class="abouta" href='http://eepurl.com/F5pkD'>the monthly newsletter</a>. Buy things I make in my <a class="abouta" href="http://jamescampbell.bigcartel.com">shop</a>. Say hello via <a class="abouta" href='http://www.twitter.com/jamescampbell'>@jamescampbell</a> or <a class='' href='mailto:james@jamescampbell.us'>email</a> me.

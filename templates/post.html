@@ -80,7 +80,9 @@
  </div>
 </div>
 <section class="postbottom">
-  {{ theme:partial src="me" }} <!-- has div class 'mee' -->
+	{{ if mee }} <!-- if mee is turned on in theme.yaml file -->
+  {{ theme:partial src="me" }} <!-- has div id 'mee' -->
+    {{ endif }}
 </section>
 <script type="text/javascript" src="/_themes/mckinley/js/mckinley.js"></script>
 
