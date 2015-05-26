@@ -13,7 +13,7 @@ show_comments: no
 
 # Homepage configuration
 # number of thumbnailed articles to show on the homepage
-home_blog_items: 12 # recommend no more than 12 on the home page unless your images are heavily optimized
+home_blog_items: 9 # recommend no more than 9 on the home page unless your images are heavily optimized
 
 # Global text snippets
 no_results_text: "Sorry, no results found."
