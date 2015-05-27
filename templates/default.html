@@ -19,7 +19,7 @@
     	</div>
 		<div class='headnamer'>
 			<a href='about'> <!-- link to about me page when click / touch on my face -->
-			<div id='circularpost' style="background-image:url(/assets/img/blog/profile.jpg)"></div> <!-- set your profile image -->
+			<div id='circularpost' style="background-image:url(/assets/img/blog/profile.jpg)" title='hi.'></div> <!-- set your profile image -->
 			<!-- circular profile image change this to set your own-->
 			</a>
 			<!-- {{ theme:partial src="me" }} about me blurb using '.mee' div class -->
@@ -32,7 +32,7 @@
 <div class="home__stories"><!-- latest post thumbs start here -->
 	        <!-- {{ theme:partial src="category-list" }} -->
 	{{ entries:listing folder="blog" limit="{ home_blog_items }" }}
-	    <article class="home__single" style="background-image:url({{ header_img }})"><!-- set header_img in fieldlist config file -->
+	    <article class="home__single" style="background-image:url({{ blog_img }}{{ header_img }})"><!-- set header_img in fieldlist config file -->
 	    <a class='home__a' href="{{ url }}">
 
 				<div class="home__link">

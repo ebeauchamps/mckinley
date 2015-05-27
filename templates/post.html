@@ -1,7 +1,7 @@
 <!-- default.html file is before here -->
 <section><!-- full screen header -->
 <div class='absolutehead'> <!-- absolutehead resets the margin, height, width -->
- 		<div class='mastheader' style="background-image: url('{{ if header_img }} {{ header_img }} {{ endif }}');"> <!-- this is where we set the header_img from post.yaml in config/fieldsets -->
+ 		<div class='mastheader' style="background-image: url('{{ if header_img }} {{ blog_img }}{{ header_img }} {{ endif }}');"> <!-- this is where we set the header_img from post.yaml in config/fieldsets -->
  		<div class='darker'></div><!-- this makes the background image darker -->
  		<div class='spacer'></div> <!-- ensures causes and effects title shows in middle of screen -->
  			<div class='posthead'> <!-- sets proper distance back up from middle of s-->
