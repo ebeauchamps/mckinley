@@ -17,13 +17,16 @@
  	<section class='about-me'>
     	<div class='spacer'><!-- 'spacer' div moves the following content to the middle of the screen (works on any screen and awesome) -->
     	</div>
+    	{{ if profile_img_on }}
 		<div class='headnamer'>
-			<a href='about'> <!-- link to about me page when click / touch on my face -->
-			<div id='circularpost' style="background-image:url(/assets/img/blog/profile.jpg)" title='hi.'></div> <!-- set your profile image -->
+			<a href='{{ click_img_link }}'> <!-- link to about me page when click / touch on my face -->
+
+			<div id='circularpost' style="background-image:url({{ profile_link }})" title='hi.'></div> <!-- set your profile image -->
 			<!-- circular profile image change this to set your own-->
 			</a>
 			<!-- {{ theme:partial src="me" }} about me blurb using '.mee' div class -->
 	 	</div>
+	 	{{ endif }}
  	</section>
  	<div class='latest-title'>
 		 	<a name='latest'>The Latest</a>

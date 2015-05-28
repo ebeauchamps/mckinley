@@ -40,6 +40,11 @@ home_blog_items: 9 # recommend no more than 9 on the home page unless your image
 # path for blog images
 blog_img: /assets/img/blog/
 
+# path for profile image circle (recommend 150x150px profile image, circle is formatted in CSS automagically for you
+profile_img_on: true
+profile_link: /assets/img/blog/profile.jpg
+click_img_link: about
+
 # Global text snippets
 no_results_text: "Sorry, no results found."
 
