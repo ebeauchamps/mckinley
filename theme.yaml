@@ -16,6 +16,23 @@ site_titler: true # if set to true, your title will be whatever you put below, m
 # example <span class='sitenamespan'>My Cool Statamic Blog</span>
 site_title_text: <span class='sitenamespan'>caus</span><span class='sitenamespan mirror animated flip'>e</span><span class='sitenamespan'>s & </span> <span class='sitenamespan mirror animated flip'>e</span><span class='sitenamespan'>ff</span><span class='sitenamespan mirror animated flip'>e</span><span class='sitenamespan'>cts</span></a><a href='#latest'><span class='fa fa-caret-square-o-down'></span>
 
+# HOME PAGE SEO SETTINGS
+
+# web of trust settings (setup on mywot.com)
+woton: true
+wot_code: 3e07f7bccd6342712770
+
+# meta tag description
+meta_desc_on: true
+meta_desc: The gallery and writings of James Campbell, who is based in Washington DC and writes code, designs, and takes pictures. He enjoys helping creatives, executives, and entrepreneurs learn how to fish instead of continuing to allow them to pay people to catch it for them.
+
+# meta author tag
+meta_auth_on: true
+meta_auth: James Campbell
+
+# meta keywords
+meta_keywords_on: true
+meta_keywords: photography, washington dc, dc, apple, mobile photography, stock photos, photographs, coding, html, css, statamic
 
 # number of thumbnailed articles to show on the homepage
 home_blog_items: 9 # recommend no more than 9 on the home page unless your images are heavily optimized
