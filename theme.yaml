@@ -11,6 +11,12 @@ theme_name: McKinley
 disqus_account: jamesacampbell
 show_comments: no
 
+# HOME PAGE TWEAKS
+site_titler: true # if set to true, your title will be whatever you put below, make sure to keep the sitenamespan class
+# example <span class='sitenamespan'>My Cool Statamic Blog</span>
+site_title_text: <span class='sitenamespan'>caus</span><span class='sitenamespan mirror animated flip'>e</span><span class='sitenamespan'>s & </span> <span class='sitenamespan mirror animated flip'>e</span><span class='sitenamespan'>ff</span><span class='sitenamespan mirror animated flip'>e</span><span class='sitenamespan'>cts</span></a><a href='#latest'><span class='fa fa-caret-square-o-down'></span>
+
+
 # number of thumbnailed articles to show on the homepage
 home_blog_items: 9 # recommend no more than 9 on the home page unless your images are heavily optimized
 
