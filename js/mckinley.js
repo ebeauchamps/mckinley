@@ -4,12 +4,15 @@
 var message="Sorry, right-click has been disabled for your safety.";
 
 function clickIE() {if (document.all) {(message);return false;}}
-function clickNS(e) {if
-(document.layers||(document.getElementById&&!document.all)) {
-if (e.which==2||e.which==3) {(message);return false;}}}
-if (document.layers)
-{document.captureEvents(Event.MOUSEDOWN);document.onmousedown=clickNS;}
-else{document.onmouseup=clickNS;document.oncontextmenu=clickIE;}
+function clickNS(e) {
+	if (document.layers||(document.getElementById&&!document.all)) {
+	if (e.which==2||e.which==3) {(message);return false;}}}
+	if (document.layers){
+			document.captureEvents(Event.MOUSEDOWN);document.onmousedown=clickNS;
+		}
+	else {
+			document.onmouseup=clickNS;document.oncontextmenu=clickIE;
+		}
 
 // get client height and set it for background image and scroll panes
 var contained = document.getElementsByClassName("mastheader");
@@ -44,17 +47,15 @@ aboutsection.style.height = viewportheight+"px";
 }
 
 document.oncontextmenu=new Function("return false");
-$(document).keyup(function(e) {
-  if (e.keyCode == 27) { window.location = 'http://www.j1c.us'; } // if esc key press
-  else if (e.keyCode == 81) { // if spacebar key press stop rotating letters
-  	$('a span#sitenamespan.mirror').css({'-moz-animation-iteration-count': '1'});
-  	$('a span#sitenamespan.mirror').css({'-webkit-animation': 'none'});
-  	$('a span#sitenamespan.mirror').css({'-webkit-animation-play-state': 'initial'});
-  	$('a span#sitenamespan.mirror').css({'-moz-animation-iteration-count': '1'});
-  	$('a span#sitenamespan.mirror').css({'-o-animation-iteration-count': '1'});
-  	$('a span#sitenamespan.mirror').css({'animation-iteration-count': '1'});
-  	}
+document.onkeyup = (function(e) {
+  if (e.keyCode == 27) { window.location = 'https://jamescampbell.us'; } // if esc key press
+  else if (e.keyCode == 187) { overlay(); }// if equal sign pressed, display special message (see overlay function)
 });
+
+ function overlay() { // overlay easteregg when keycode pressed above
+    el = document.getElementById("overlay");
+   el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+ }
 
 function randomimagehome() {
     var images = ['1.jpg', '2.jpg', '3.jpg', '4.jpg']; // any image files you want to use here!
@@ -67,13 +68,28 @@ function randomimagehome() {
 
 function scaleFont() {
 
-  var viewPortWidth = $(window).width();
+  var viewPortWidth = window.innerWidth;
 
-  if (viewPortWidth > 1900) {$('body').addClass('extraWide').removeClass('wide, standard, narrow, extraNarrow')}
-  else if (viewPortWidth > 1400) {$('body').addClass('wide').removeClass('extraWide, standard, narrow, extraNarrow')}
-  else if (viewPortWidth > 1000) {$('body').addClass('standard').removeClass('extraWide, wide, narrow, extraNarrow')}
-  else if (viewPortWidth > 700) {$('body').addClass('narrow').removeClass('extraWide, standard, wide, extraNarrow')}
-  else {$('body').addClass('extraNarrow').removeClass('extraWide, standard, wide, narrow')};
+  if (viewPortWidth > 1900) {
+	  document.body.className = '';
+	  document.getElementsByTagName('body')[0].className+='extraWide';
+  }
+  else if (viewPortWidth > 1400) {
+	  document.body.className = '';
+	  document.getElementsByTagName('body')[0].className+='wide';
+	  }
+  else if (viewPortWidth > 1000) {
+	  document.body.className = '';
+	  document.getElementsByTagName('body')[0].className+='standard';
+  }
+  else if (viewPortWidth > 700) {
+	  document.body.className = '';
+	  document.getElementsByTagName('body')[0].className+='narrow';
+  }
+  else {
+	  document.body.className = '';
+	  document.getElementsByTagName('body')[0].className+='extraNarrow';
+  };
   setTimeout(scaleFont, 100);
 }
 
@@ -82,21 +98,28 @@ scaleFont();
 randomimagehome();
 
 
+// FUCKING SMOOTH SCROLL TO LOCAL # REFERENCE LINK WITHOUT JQUERY
+function smoothScroll(target) {
+    var scrollContainer = target;
+    do { //find scroll container
+        scrollContainer = scrollContainer.parentNode;
+        if (!scrollContainer) return;
+        scrollContainer.scrollTop += 1;
+    } while (scrollContainer.scrollTop == 0);
 
+    var targetY = 0;
+    do { //find the top of target relatively to the container
+        if (target == scrollContainer) break;
+        targetY += target.offsetTop;
+    } while (target = target.offsetParent);
 
-$('a[href*=#]:not([href=#])').click(function() {
-    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
-        || location.hostname == this.hostname) {
-
-        var target = $(this.hash);
-        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-           if (target.length) {
-             $('html,body').animate({
-                 scrollTop: target.offset().top
-            }, 1000);
-            return false;
-        }
+    scroll = function(c, a, b, i) {
+        i++; if (i > 30) return;
+        c.scrollTop = a + (b - a) / 30 * i;
+        setTimeout(function(){ scroll(c, a, b, i); }, 20);
     }
-});
+    // start scrolling
+    scroll(scrollContainer, scrollContainer.scrollTop, targetY, 0);
+}
 
 

@@ -1,10 +1,6 @@
 <!DOCTYPE HTML>
 <!-- entire site coded by hand by web developer James Campbell, ask him about it on twitter @jamescampbell -->
 <!-- for explanations / style guide of how he did it, please see the readme file at https://github.com/jamesacampbell/mckinley
-
-
-
-
 	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 					\			\\\\\\\\\\\\\\\\\\\\\\\\\
 					\			\
@@ -26,86 +22,9 @@
 		\\			\			\
 		\\			\			\
 		\\\\\\\\\\\\\			\\\\\\\\\\\\\\\\\\\\\\\\\
-
-
 	https://jamescampbell.US https://jamescampbell.US https://jamescampbell.US
-
 	WEB DESIGN / BRANDING / PHOTOGRAPHY / VIDEO /
-
 	HELPING CREATIVES, BRANDS, AND PEOPLE DO GREAT THINGS
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 -->
 <html>
 <head>
@@ -123,26 +42,20 @@
   <meta name="keywords" content="{{ meta_keywords }}">
   {{ endif }}
   <title>{{ _site_name }} | {{ title }}</title>
-  <!--<script src="../mint/?js" type="text/javascript"></script><!-- great analytics at havamint dot com -->
-  <script src="http://code.jquery.com/jquery-latest.min.js"></script><!-- jquery is fast, don't believe the javascript purists -->
- <link rel="stylesheet" type="text/css" href="/_themes/mckinley/css/font.css" media="all"><!--css for all fonts-->
 <!-- check useragent to see if it is iPhone -->
 <?php
   $browser = (bool) strpos($_SERVER['HTTP_USER_AGENT'],"iPhone");
     if ($browser == true){
     $browser = 'iphone';
   }  ;
-
   $browsered = (bool) strpos($_SERVER['HTTP_USER_AGENT'],"iPad");
   if ($browsered == true){
   $browsered = 'ipad';
   } ;
-
    $browsera = (bool) strpos($_SERVER['HTTP_USER_AGENT'],"Android");
   if ($browsera == true){
   $browsera = 'android';
   }
-
 ?>
 <?php if($browser == 'iphone'|| $browser == 'android'){ ?> <!-- if browser is iphone then display different css spreadsheet -->
   <meta name="format-detection" content="telephone=no">
@@ -152,7 +65,6 @@
   <meta name="apple-touch-fullscreen" content="yes" >
     <meta name="apple-mobile-web-app-capable" content="yes" > <!-- you can comment this out to test to make sure it works-->
     <meta name="apple-mobile-web-app-status-bar-style" content="black" >
-
 <?php }else{ ?><!-- if not iphone then display regular css file -->
   <link rel="stylesheet" href="{{ theme:css }}" />
 <?php } ?>
@@ -175,38 +87,31 @@
     var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0]; g.type='text/javascript';
     g.defer=true; g.async=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
   })();
-
 </script> -->
 <!--<noscript><p><img src="http://jamescampbell.us/piwik/piwik.php?idsite=1" style="border:0;" alt="" /></p></noscript>-->
 <!-- End Piwik Code -->
 </head>
 <body>
-
-
-  <div class="container">
+  <div id='top' class="container"></div>
      <!-- add content here -->
         {{ layout_content }}
-
   {{ if include_maps }}
       {{ location:start_maps }}
   {{ endif }}
+
 <section id="footer">
-
 {{ theme:partial src="socialiter" }}
-
 </section>
 <!-- checks if browser is mobile using php -->
 <?php if($browser == 'iphone'){ ?>
 <div id="iphone-block">hey there, nice iphone! </div>
 <?php } ?>
-
 <?php if($browsered == 'ipad'){ ?>
 <div id="ipad-block">hey there, nice ipad! </div>
 <?php } ?>
-
 <?php if($browsera == 'android'){ ?>
 <div id="ipad-block">hey there, nice android! </div>
 <?php } ?>
-<script type="text/javascript" src="/_themes/mckinley/js/mckinley.js"></script>
+<script type="text/javascript" src="/_themes/mckinley/js/mckinleymini.js"></script>
 </body>
 </html>

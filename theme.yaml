@@ -14,7 +14,7 @@ show_comments: no
 # HOME PAGE TWEAKS
 site_titler: true # if set to true, your title will be whatever you put below, make sure to keep the sitenamespan class
 # example <span class='sitenamespan'>My Cool Statamic Blog</span>
-site_title_text: <span class='sitenamespan'>caus</span><span class='sitenamespan mirror animated flip'>e</span><span class='sitenamespan'>s & </span> <span class='sitenamespan mirror animated flip'>e</span><span class='sitenamespan'>ff</span><span class='sitenamespan mirror animated flip'>e</span><span class='sitenamespan'>cts</span></a><a href='#latest'><span class='fa fa-caret-square-o-down'></span>
+site_title_text: <span class='sitenamespan'>caus</span><span class='sitenamespan mirror animated flip'>e</span><span class='sitenamespan'>s & </span> <span class='sitenamespan mirror animated flip'>e</span><span class='sitenamespan'>ff</span><span class='sitenamespan mirror animated flip'>e</span><span class='sitenamespan'>cts</span></a><a onclick="smoothScroll(document.getElementById('latest'))" href='#latest'><span class='fa fa-caret-square-o-down'></span>
 
 # HOME PAGE SEO SETTINGS
 
