@@ -1,5 +1,5 @@
 ## McKinley Theme ##
->v.1.1
+>v.1.2
 
 Medium inspired theme for Statamic [by @jamescampbell](http://twitter.com/jamescampbell), see it in action over at James's site [jamescampbell.us](https://jamescampbell.us).
 
@@ -12,7 +12,7 @@ Medium inspired theme for Statamic [by @jamescampbell](http://twitter.com/jamesc
 * Categories & Archives support.
 * Set your Twitter, Instagram, and Tumblr info directly from the theme.yaml file and watch the footer update with the proper social icon links.
 
-> Uses very minimal jquery to get height/width of window, otherwise vanilla HTML5 / CSS3. NO BLOAT!
+> Uses very minimal pure javascript to get height of window, otherwise vanilla HTML / CSS. NO BLOAT!
 
 ### Examples
 > page.html
