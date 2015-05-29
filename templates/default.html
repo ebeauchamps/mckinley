@@ -68,15 +68,6 @@
 <div id="homefoot">
  <section class='thisnav'>{{ theme:partial src="nav" }}</section>
 </div>
-<script type="text/javascript" src="/_themes/mckinley/js/mckinley.js"></script>
-<!-- the below script allows for random background images on home page. Please change 1-4 images to your choice-->
- <script type="text/javascript">
-   $(function() {
-    var wwidth = $(window).width();
-    var hheight = $(".mastheader").height();
-    var images = ['1.jpg', '2.jpg', '3.jpg', '4.jpg']; // any image files you want to use here!
-    var rando = images[Math.floor(Math.random() * images.length)]; // make the randomness!
-    $('.mastheader').css({'background-image': 'url({{ theme:img }}' + rando + ')'});
 
-   });
-  </script>
+<!-- the below script allows for random background images on home page. Please change 1-4 images to your choice-->
+

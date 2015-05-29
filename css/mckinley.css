@@ -810,6 +810,8 @@ li li { font-size: 100%; }
 	padding: 0;
 	/*background-color:#F9F9F9;*/
 	max-width: 100%;
+	background-position: center center;
+	background-size: cover;
 }
 
 /* tip: how to get the color for the main header area */
