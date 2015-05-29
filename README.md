@@ -20,7 +20,8 @@ See what the theme looks like:
 ### Installation
 1. Clone this repo into your _themes directory or download and unzip to the _themes directory. Final structure should be _themes/mckinley.
 2. Change you config in _config/settings.yaml to use the new theme by changing the active theme name to mckinley.
-3. Profit
+3. Change the theme.yaml file settings to match the way you want your site to look (metatags, profile photo link, images folder url, etc.)
+4. profit.
 
 ### Customization of settings
 
