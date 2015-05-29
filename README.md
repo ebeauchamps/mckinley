@@ -5,14 +5,29 @@ Medium inspired theme for Statamic [by @jamescampbell](http://twitter.com/jamesc
 
 ###Features:
 * Responsive, mobile-first layout (not just mobile-friendly)
+* two custom templates, page.html & post.html
 * Full bleed background images that fill entire screen for each post.
 * Rotating random images background on homepage (set images 1.jpg,2.jpg,3.jpg,4.jpg in img folder)
-* Title, Sub-Title, Date, word-count / read-time per post page.
+* Title, Sub-Title, Date, word-count / read-time per blog post.
+* Categories & Archives support.
 * Set your Twitter, Instagram, and Tumblr info directly from the theme.yaml file and watch the footer update with the proper social icon links.
 
 > Uses very minimal jquery to get height/width of window, otherwise vanilla HTML5 / CSS3. NO BLOAT!
 
 ### Examples
+> page.html
+The header for every blog post is simple, set your title, subtitle(captioned), and background image(header_img) as well as categories as you wish:
+
+```
+---
+title: Switching to Statamic from Squarespace
+author: James Campbell
+captioned: tl;dr Recurring charges and lack of customization.
+header_img: switching.jpg
+categories: 
+	- writing
+---
+```
 See what the theme looks like:
 * [Blog Post Page](https://jamescampbell.us/blog/on-photography-and-joy)
 * [Regular Page](https://jamescampbell.us/about)
