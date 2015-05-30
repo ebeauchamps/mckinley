@@ -71,25 +71,11 @@
  <link rel="stylesheet" href="/_themes/mckinley/css/animate.css" />
 <link rel="apple-touch-icon-precomposed" href="{{ theme:img src="apple-touch-icon.png" }}" />
   <link rel="icon" type="image/png" href="{{ theme:img src="256.png" }}" />
-<meta name="google-site-verification" content="tdzqRL5tKgp7oWXNi3GzKNuVHj5-rS6_gaag0arzcwI" >
+  {{ if google_ver_on }}
+<meta name="google-site-verification" content="{{ google_ver }}" >
+	{{ endif }}
 <meta name="msvalidate.01" content="8E7C7C1943433D39684C94A57200398E" >
 <link rel="stylesheet" href="/_themes/font-awesome/css/font-awesome.min.css">
-<!-- Piwik -->
-<!--
-<script type="text/javascript">
-  var _paq = _paq || [];
-  _paq.push(['trackPageView']);
-  _paq.push(['enableLinkTracking']);
-  (function() {
-    var u=(("https:" == document.location.protocol) ? "https" : "http") + "://jamescampbell.us/piwik/";
-    _paq.push(['setTrackerUrl', u+'piwik.php']);
-    _paq.push(['setSiteId', 1]);
-    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0]; g.type='text/javascript';
-    g.defer=true; g.async=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
-  })();
-</script> -->
-<!--<noscript><p><img src="http://jamescampbell.us/piwik/piwik.php?idsite=1" style="border:0;" alt="" /></p></noscript>-->
-<!-- End Piwik Code -->
 </head>
 <body>
   <div id='top' class="container"></div>
