@@ -58,23 +58,25 @@
   }
 ?>
 <?php if($browser == 'iphone'|| $browser == 'android'){ ?> <!-- if browser is iphone then display different css spreadsheet -->
-  <meta name="format-detection" content="telephone=no">
+  <meta name="format-detection" content="telephone=no"> <!-- turn off the telephone auto-fix -->
  <meta name="viewport" id="vp" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width" >
  <meta name="viewport" id="vp" content="initial-scale=1.0,user-scalable=no,maximum-scale=1" media="(device-height: 568px)" >
   <link rel="stylesheet" type="text/css" href="/_themes/mckinley/css/mobile.css" media="all">
   <meta name="apple-touch-fullscreen" content="yes" >
     <meta name="apple-mobile-web-app-capable" content="yes" > <!-- you can comment this out to test to make sure it works-->
     <meta name="apple-mobile-web-app-status-bar-style" content="black" >
-<?php }else{ ?><!-- if not iphone then display regular css file -->
+<?php }else{ ?><!-- if not iphone / android then display regular css file -->
   <link rel="stylesheet" href="{{ theme:css }}" />
 <?php } ?>
  <link rel="stylesheet" href="/_themes/mckinley/css/animate.css" />
 <link rel="apple-touch-icon-precomposed" href="{{ theme:img src="apple-touch-icon.png" }}" />
   <link rel="icon" type="image/png" href="{{ theme:img src="256.png" }}" />
-  {{ if google_ver_on }}
+    {{ if google_ver_on }}
 <meta name="google-site-verification" content="{{ google_ver }}" >
 	{{ endif }}
-<meta name="msvalidate.01" content="8E7C7C1943433D39684C94A57200398E" >
+	{{ if microsoft_ver_on }}
+<meta name="msvalidate.01" content="{{ microsoft_ver }}" >
+	{{ endif }}
 <link rel="stylesheet" href="/_themes/font-awesome/css/font-awesome.min.css">
 </head>
 <body>
