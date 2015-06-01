@@ -6,7 +6,7 @@ Medium inspired theme for Statamic [by @jamescampbell](http://twitter.com/jamesc
 ###Features:
 * Responsive, mobile-first layout (not just mobile-friendly)
 * two custom templates, page.html & post.html
-* Full bleed background images that fill entire screen for each post.
+* Full bleed background images that fill entire screen for each post (recommend no larger than 1000px width).
 * Rotating random images background on homepage (set images 1.jpg,2.jpg,3.jpg,4.jpg in img folder)
 * Title, Sub-Title, Date, word-count / read-time per blog post.
 * Categories & Archives support.
@@ -36,7 +36,8 @@ See what the theme looks like:
 1. Clone this repo into your _themes directory or download and unzip to the _themes directory. Final structure should be _themes/mckinley.
 2. Change you config in _config/settings.yaml to use the new theme by changing the active theme name to mckinley.
 3. Change the theme.yaml file settings to match the way you want your site to look (metatags, profile photo link, images folder url, etc.)
-4. profit.
+4. Make especially sure to set your default blog post image folder properly as this will affect each post you make. Follow the example I have that is the way I structured mine which is under the /assets/img/blog folder with the title-post.jpg as the format. 
+5. profit.
 
 ### Customization of settings
 
