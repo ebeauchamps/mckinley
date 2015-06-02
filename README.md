@@ -11,6 +11,7 @@ Medium inspired theme for Statamic [by @jamescampbell](http://twitter.com/jamesc
 * Title, Sub-Title, Date, word-count / read-time per blog post.
 * Categories & Archives support.
 * Set your Twitter, Instagram, and Tumblr info directly from the theme.yaml file and watch the footer update with the proper social icon links.
+* SEO friendly customize meta tags in the theme.yaml file. 
 
 > Uses very minimal pure javascript to get height of window, otherwise vanilla HTML / CSS. NO BLOAT!
 
