@@ -51,11 +51,11 @@ microsoft_ver: 8E7C7C1943433D39684C94A57200398E
 home_blog_items: 6 # recommend no more than 9 on the home page unless your images are heavily optimized
 
 # path for blog images
-blog_img: /assets/img/blog/
+blog_img: /assets/img/
 
 # path for profile image circle (recommend 150x150px profile image, circle is formatted in CSS automagically for you
 profile_img_on: true
-profile_link: /assets/img/blog/profile.jpg
+profile_link: /assets/img/profile.jpg
 click_img_link: about
 
 # Global text snippets
