@@ -1,14 +1,16 @@
 <!-- absolutehead is the basis for the entire setup of full screen content -->
 <div class='absolutehead'>
+  <div id="overlay">
+  <div>
+      Ah, you understand equality of nature. The dude abides.
+  </div>
+ </div>
 <!--<a href="http://www.jamescampbell.us"><img id='home-button'src="http://d1r5nr1emc2xy5.cloudfront.net/pics/38022" src="http://d1r5nr1emc2xy5.cloudfront.net/pics/38022?h=500&w=500"/></a>-->
-
-
 <!-- mastheader is where we set the background image, may want to change to random rotating image eventually -->
- 	<section class='mastheader' style="background-image: url('assets/img/blog/fever/-nyc-skyline-portra-tint1.jpg')">
+ 	<section class='mastheader' style="background-image: url('assets/img/blog/fever/-nyc-skyline-portra-tint1.jpg')"><!-- default image in case background 1,2,3,4 not set in mckinley/assets -->
  		<div class='mainnamer'> <!-- sets proper distance back up from middle of screen for site-title-->
         	<h1 class="site-name">
         	<a id='causes' title='click to refresh screen with random background image' href='{{ homepage }}'>{{ if site_titler }}{{ site_title_text }}{{ else }}<span class='sitenamespan'>MCKINLEY GROUP</span>{{ endif }}</a>
-        	<!--{{ _site_name }}-->
         	</h1>
        </div>
     </section>
@@ -17,19 +19,17 @@
  	<section class='about-me'>
     	<div class='spacer'><!-- 'spacer' div moves the following content to the middle of the screen (works on any screen and awesome) -->
     	</div>
-    	{{ if profile_img_on }}
+    	{{ if profile_img_on }}<!-- turn on or off profile image and image path set in theme.yaml in config folder -->
 		<div class='headnamer'>
 			<a href='{{ click_img_link }}'> <!-- link to about me page when click / touch on my face -->
-
 			<div id='circularpost' style="background-image:url({{ profile_link }})" title='hi.'></div> <!-- set your profile image -->
 			<!-- circular profile image change this to set your own-->
 			</a>
-			<!-- {{ theme:partial src="me" }} about me blurb using '.mee' div class -->
 	 	</div>
 	 	{{ endif }}
  	</section>
- 	<div class='latest-title'>
-		 	<a name='latest'>The Latest</a>
+ 	<div class='latest-title' id='latest'>
+		 	<a>The Latest</a>
  	</div>
 
 <div class="home__stories"><!-- latest post thumbs start here -->
@@ -37,11 +37,8 @@
 	{{ entries:listing folder="blog" limit="{ home_blog_items }" }}
 	    <article class="home__single" style="background-image:url({{ blog_img }}{{ header_img }})"><!-- set header_img in fieldlist config file -->
 	    <a class='home__a' href="{{ url }}">
-
 				<div class="home__link">
                 <h3 class="thumbtitle">{{ title }}</h3>
-                <!--<h3 class='thumbpost'>{{ datestamp format="n-j-Y" }}</h3>--><!--, filed under {{ if categories }} {{ categories_url_list }}{{ endif }} -->
-     <!--{{ if categories_list!='photo journal' }}<h3 class='counts'> {{ content|word_count }} words.  {{ if content|word_count > 249 }} {{ content|word_count|/:250|round:0 }} minute read. {{ endif }} {{ endif }}</h3>-->
               	</div>
 		</a>
 	    </article>
@@ -50,17 +47,12 @@
 
 <div class="pagination">
 	{{ entries:pagination folder="blog" limit="{ home_blog_items }" }}
-
 	  {{ if next_page }}
 	    <a rel="next" href="{{ next_page }}">&lt; Older Posts</a>
 	  {{ endif }}
-
 	  {{ if previous_page }}
 	    <a rel="prev" href="{{ previous_page }}">Newer Posts ></a>
 	  {{ endif }}
-
-
-
 	{{ /entries:pagination }}
 
 </div>
@@ -68,15 +60,3 @@
 <div id="homefoot">
  <section class='thisnav'>{{ theme:partial src="nav" }}</section>
 </div>
-<script type="text/javascript" src="/_themes/mckinley/js/mckinley.js"></script>
-<!-- the below script allows for random background images on home page. Please change 1-4 images to your choice-->
- <script type="text/javascript">
-   $(function() {
-    var wwidth = $(window).width();
-    var hheight = $(".mastheader").height();
-    var images = ['1.jpg', '2.jpg', '3.jpg', '4.jpg']; // any image files you want to use here!
-    var rando = images[Math.floor(Math.random() * images.length)]; // make the randomness!
-    $('.mastheader').css({'background-image': 'url({{ theme:img }}' + rando + ')'});
-
-   });
-  </script>

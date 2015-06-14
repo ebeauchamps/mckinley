@@ -5,7 +5,11 @@
 #######################################################################################################
 
 # Theme name
-theme_name: McKinley
+theme_name: mckinley
+
+# debug and test mobile
+force_mobile: false
+mobile_css_path: /_themes/mckinley/css/mobile.css
 
 # Comments + Disqus
 disqus_account: jamesacampbell
@@ -14,7 +18,7 @@ show_comments: no
 # HOME PAGE TWEAKS
 site_titler: true # if set to true, your title will be whatever you put below, make sure to keep the sitenamespan class
 # example <span class='sitenamespan'>My Cool Statamic Blog</span>
-site_title_text: <span class='sitenamespan'>caus</span><span class='sitenamespan mirror animated flip'>e</span><span class='sitenamespan'>s & </span> <span class='sitenamespan mirror animated flip'>e</span><span class='sitenamespan'>ff</span><span class='sitenamespan mirror animated flip'>e</span><span class='sitenamespan'>cts</span></a><a href='#latest'><span class='fa fa-caret-square-o-down'></span>
+site_title_text: <span class='sitenamespan'>caus</span><span class='sitenamespan mirror animated flip'>e</span><span class='sitenamespan'>s & </span> <span class='sitenamespan mirror animated flip'>e</span><span class='sitenamespan'>ff</span><span class='sitenamespan mirror animated flip'>e</span><span class='sitenamespan'>cts</span></a><a onclick="smoothScroll(document.getElementById('latest'))" href='#latest'><span class='fa fa-caret-square-o-down'></span>
 
 # HOME PAGE SEO SETTINGS
 
@@ -34,15 +38,24 @@ meta_auth: James Campbell
 meta_keywords_on: true
 meta_keywords: photography, washington dc, dc, apple, mobile photography, stock photos, photographs, coding, html, css, statamic
 
+###### no excuse not to register your sites on the various search engines and verify ownership.
+# google verification from site master tools
+google_ver_on: true
+google_ver: tdzqRL5tKgp7oWXNi3GzKNuVHj5-rS6_gaag0arzcwI
+
+# microsoft site verification from site master tools in microsoft
+microsoft_ver_on: true
+microsoft_ver: 8E7C7C1943433D39684C94A57200398E
+
 # number of thumbnailed articles to show on the homepage
-home_blog_items: 9 # recommend no more than 9 on the home page unless your images are heavily optimized
+home_blog_items: 6 # recommend no more than 9 on the home page unless your images are heavily optimized
 
 # path for blog images
-blog_img: /assets/img/blog/
+blog_img: /assets/img/
 
 # path for profile image circle (recommend 150x150px profile image, circle is formatted in CSS automagically for you
 profile_img_on: true
-profile_link: /assets/img/blog/profile.jpg
+profile_link: /assets/img/profile.jpg
 click_img_link: about
 
 # Global text snippets
@@ -68,6 +81,8 @@ copyright_on: true
 copyright_info: All Rights Reserved James Campbell. All content subject to Copyright.
 copyright_details_link: https://jamescampbell.us/copyright-info
 
-# me section displayed at bottom before menu
+# me section displayed at bottom before menu on post pages only
 mee: true
 mee_content: Hello. I am <a class="abouta" rel="author" href="https://www.jamescampbell.us/about">James Campbell</a>. I do things. This is where I share solutions I've found and projects I am working on. Subscribe to <a class="abouta" target="_blank" href="http://feedpress.it/e/mailverify?feed_id=jamescampbell">every new post</a> or <a class="abouta" href='http://eepurl.com/F5pkD'>the monthly newsletter</a>. Buy things I make in my <a class="abouta" href="http://jamescampbell.bigcartel.com">shop</a>. Say hello via <a class="abouta" href='http://www.twitter.com/jamescampbell'>@jamescampbell</a> or <a class='' href='mailto:james@jamescampbell.us'>email</a> me.
+
+
