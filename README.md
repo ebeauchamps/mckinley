@@ -1,17 +1,19 @@
 ## McKinley Theme ##
->v.1.2
+>v.1.3
 
 Medium inspired theme for Statamic [by @jamescampbell](http://twitter.com/jamescampbell), see it in action over at James's site [jamescampbell.us](https://jamescampbell.us).
 
 ###Features:
 * Responsive, mobile-first layout (not just mobile-friendly)
 * two custom templates, page.html & post.html
-* Full bleed background images that fill entire screen for each post (recommend no larger than 1000px width).
+* social links bar and copyright as a partial-type template.
+* Full bleed background images that fill entire screen for each post (recommend no larger than 1000px width)
 * Rotating random images background on homepage (set images 1.jpg,2.jpg,3.jpg,4.jpg in img folder)
-* Title, Sub-Title, Date, word-count / read-time per blog post.
-* Categories & Archives support.
-* Set your Twitter, Instagram, and Tumblr info directly from the theme.yaml file and watch the footer update with the proper social icon links.
-* SEO friendly customize meta tags in the theme.yaml file. 
+* Title, Sub-Title, Date, word-count / read-time per blog post
+* Categories, 404 page, and Archives support
+* Set your Twitter, Instagram, and Tumblr info directly from the theme.yaml file and watch the footer update with the proper social icon links
+* SEO friendly customize meta tags in the theme.yaml file
+* FONT-AWESOME support built-in (version 4.3) and in use for the social icons bar
 
 > Uses very minimal pure javascript to get height of window, otherwise vanilla HTML / CSS. NO BLOAT!
 
