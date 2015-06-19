@@ -280,7 +280,7 @@ a#causes {
 }
 
 a#causes:hover, a#effects:hover {
-	color: #e95f1f;
+	color: #e85e1f;
 }
 
 
@@ -313,7 +313,7 @@ a:hover {
 
 /* older posts and newer posts block */
 .pagination {
-font-family: Lato, sans-serif;
+font-family: Arial, sans-serif;
 	font-size: 1.8em;
 	text-align:center;
 	padding:5px;
@@ -330,7 +330,7 @@ font-family: Lato, sans-serif;
 	border: 2px solid #DDDDDD;
 	padding: 5px 7px 5px 7px;
 	margin-right: 10px;
-	font-weight:300;
+	font-weight:normal;
 	position: relative;
 	transition:0.5s linear;
 }
@@ -704,7 +704,7 @@ li.naver a {
 .naver a:active {
 	border: 4px solid #898989;
 	padding: 2px 5px 2px 5px;
-	background-color: gold;
+	background-color: #818273;
 	color: white;
 }
 
@@ -747,8 +747,8 @@ li .current {
 	/*border: 4px solid #898989;*/
 	padding: 2px 5px 2px 5px;
 	background-color: #f2f2f2;
-	color: #0b0b0b;
-    background-color: gold;
+	color: white;
+    background-color: #818273;
     transition: opacity 0.2s .5s ease;
     -webkit-transition: .1s all;
     -webkit-transition-delay: .1s;
@@ -764,7 +764,7 @@ li .current {
 
 li .current a {
 	padding: 2px 5px 2px 5px;
-	background-color: gold;
+	background-color: #818273;
 	color: #0b0b0b;
 	border:none;
 }
@@ -1545,9 +1545,8 @@ ul.social-new li a {
   padding: 10px;
   transition: .3s all linear;
   transition-delay: .05s;
-  border: 1x solid DarkSlateGray !important;
-  border-radius: 50%;
   padding:10px;
+  background-color: none;
 }
 
 ul.social-new li a:hover {
@@ -1555,9 +1554,8 @@ ul.social-new li a:hover {
     transition: .3s all linear;
     transition-delay: .05s;
     color: black !important;
-    border: 1x solid black !important;
-    border-radius: 50%;
  padding:10px;
+ background-color: none;
 }
 
 ul.social-new li a.fa-twitter  {
@@ -1858,8 +1856,8 @@ ol {
 a span.sitenamespan {
 	padding:0;
 	margin:0;
-	line-height:.5em;
-	position:relative;;
+	line-height:0.5em;
+	position:relative;
 	color:rgba(230,230,230,0.75);
 	vertical-align:top;
 	transition: 0.4s linear;
@@ -1893,7 +1891,7 @@ a span.fa.fa-caret-square-o-down {
 
 a:hover span.fa.fa-caret-square-o-down {
 	vertical-align: top;
-	color: gold;
+	color: #818273;
 	padding-left:10px;
 	vertical-align: top;
 	font-size: .6em;
@@ -1909,7 +1907,7 @@ a span.fa.fa-caret-square-o-down.post {
 }
 
 a:hover span.fa.fa-caret-square-o-down.post {
-	color: gold;
+	color: #818273;
 	padding-left:8px;
 	font-size: 1.4em;
 	transition: 0.4s linear;
@@ -1952,7 +1950,7 @@ a i.fa.fa-dot-circle-o {
 }
 
 a:hover i.fa.fa-dot-circle-o {
-	color: gold;
+	color: #818273;
 	padding-left:8px;
 	font-size: 1em;
 	transition: 0.4s linear;
@@ -1988,7 +1986,7 @@ a:hover span.sitenamespan.mirror {
     -animation-iteration-count: 1;
     -webkit-animation: initial;
     transition: 0.4s linear;
-    color: gold;
+    color: #818273;
 }
 
 
