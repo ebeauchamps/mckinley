@@ -1836,17 +1836,21 @@ ol {
 }
 
 .latest-title a {
-	padding: 15px;
-	font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+	padding: 10px;
+	font-family: Arial, sans-serif;
 	font-style: normal;
 	color: #31180c;
 	text-transform: uppercase;
-	font-size:4rem;
+	font-size:3.5rem;
 	/*text-shadow: 2px 2px 2px rgba(81,81,81,0.5);*/
 	margin-top:-30px;
 	text-align:left;
 	color: #fff;
 	font-weight: 400;
+	padding-left:50px;
+	margin-left: -40px;
+	padding-top: 50px;
+	background-color: rgba(100,100,110,0.2);
 }
 
 .latest-title a:hover {
