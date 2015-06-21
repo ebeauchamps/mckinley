@@ -316,32 +316,34 @@ a:hover {
 font-family: Arial, sans-serif;
 	font-size: 1.8em;
 	text-align:center;
-	padding:5px;
+	padding:0 50px 30px 0;
 	color: #0588BC;
 	text-transform: uppercase;
-	margin:5px;
+	margin:10px;
 	position:relative;
 	float:left;
 	margin-top: -50px;
+	background-color: rgba(100,100,100,0.2)
 }
 
 .pagination a {
-	color: #929a9d;
-	border: 2px solid #DDDDDD;
+	color: white;
+	border: 0 solid #DDDDDD;
 	padding: 5px 7px 5px 7px;
 	margin-right: 10px;
 	font-weight:normal;
 	position: relative;
-	transition:0.5s linear;
+	transition:0.4s ease;
+	background-color: #c3c3c3;
 }
 
 .pagination a:hover {
 	border-bottom: none;
-	border: 2px solid #8A8D8F;
-	padding: 2px 7px 2px 5px;
+	border: 0 solid #8A8D8F;
 	color: #fff;
 	background-color: #2D2926;
-	transition:0.5s linear;
+	padding: 5px 7px 5px 7px;
+	transition:0.4s ease;
 }
 /* tip: how to display the e's in effects backwards - JAC 01-04-2014 */
 .mirror {
@@ -1815,7 +1817,7 @@ div.pcaption:before {
 	color: #3c3838;
 	word-spacing: 10px;
 	padding: 10px;
-	height: 200px;
+	height: 100px;
 	letter-spacing: 2rem;
 	text-align: center;
 }
