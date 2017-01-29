@@ -2,13 +2,13 @@
 	<ul class="social-new">
 		{{ if twitter_on }}
 		<li>
-			<a class="fa fa-circle-thin fa-twitter" href="https://twitter.com/intent/user?screen_name={{ twitter_name }}">
+			<a class="fa fa-twitter" href="https://twitter.com/intent/user?screen_name={{ twitter_name }}">
 			</a>
 		</li>
 		{{ endif }}
 		{{ if tumblr_on }}
 		<li>
-			<a class="fa fa-circle-thin fa-tumblr" href="{{ tumblr_link }}"> <!-- set this in the theme.yaml in the mckinley folder -->
+			<a class="fa fa-tumblr" href="{{ tumblr_link }}"> <!-- set this in the theme.yaml in the mckinley folder -->
 			</a>
 		</li>
 		{{ endif }}
@@ -27,7 +27,7 @@
 	</ul>
 	<div class='iam'>
 		{{ if copyright_on }}
-	<div id="copyrighter" >{{ copyright_info }} <a href="{{ copyright details link }}"> details here</a>.</div>
+	<div id="copyrighter" > {{ copyright_info }} <a href='{{copyright_details_link}}' >details here</a>.</div>
 		{{ endif }}
 	</div>
 </section><!-- end socialiter partial -->

@@ -1,5 +1,8 @@
 # Changelog
 
+### Version 1.3
+* Added in the Font-Awesome icons support for the social bar links
+
 ### Version 1.1
 * Added variables everywhere that tie directly to the theme.yaml file so nothing is hard-coded in for you to mess with multiple files or have coding experience. 
 * Set your twitter,instagram,tumblr,copyright info directly from the theme.yaml file

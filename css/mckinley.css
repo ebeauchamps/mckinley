@@ -280,7 +280,7 @@ a#causes {
 }
 
 a#causes:hover, a#effects:hover {
-	color: #e95f1f;
+	color: #e85e1f;
 }
 
 
@@ -313,35 +313,37 @@ a:hover {
 
 /* older posts and newer posts block */
 .pagination {
-font-family: Lato, sans-serif;
+font-family: Arial, sans-serif;
 	font-size: 1.8em;
 	text-align:center;
-	padding:5px;
+	padding:0 50px 30px 0;
 	color: #0588BC;
 	text-transform: uppercase;
-	margin:5px;
+	margin:10px;
 	position:relative;
 	float:left;
 	margin-top: -50px;
+	background-color: rgba(100,100,100,0.2)
 }
 
 .pagination a {
-	color: #929a9d;
-	border: 2px solid #DDDDDD;
+	color: white;
+	border: 0 solid #DDDDDD;
 	padding: 5px 7px 5px 7px;
 	margin-right: 10px;
-	font-weight:300;
+	font-weight:normal;
 	position: relative;
-	transition:0.5s linear;
+	transition:0.4s ease;
+	background-color: #c3c3c3;
 }
 
 .pagination a:hover {
 	border-bottom: none;
-	border: 2px solid #8A8D8F;
-	padding: 2px 7px 2px 5px;
+	border: 0 solid #8A8D8F;
 	color: #fff;
 	background-color: #2D2926;
-	transition:0.5s linear;
+	padding: 5px 7px 5px 7px;
+	transition:0.4s ease;
 }
 /* tip: how to display the e's in effects backwards - JAC 01-04-2014 */
 .mirror {
@@ -704,7 +706,7 @@ li.naver a {
 .naver a:active {
 	border: 4px solid #898989;
 	padding: 2px 5px 2px 5px;
-	background-color: gold;
+	background-color: #818273;
 	color: white;
 }
 
@@ -747,8 +749,8 @@ li .current {
 	/*border: 4px solid #898989;*/
 	padding: 2px 5px 2px 5px;
 	background-color: #f2f2f2;
-	color: #0b0b0b;
-    background-color: gold;
+	color: white;
+    background-color: #818273;
     transition: opacity 0.2s .5s ease;
     -webkit-transition: .1s all;
     -webkit-transition-delay: .1s;
@@ -764,7 +766,7 @@ li .current {
 
 li .current a {
 	padding: 2px 5px 2px 5px;
-	background-color: gold;
+	background-color: #818273;
 	color: #0b0b0b;
 	border:none;
 }
@@ -1545,9 +1547,8 @@ ul.social-new li a {
   padding: 10px;
   transition: .3s all linear;
   transition-delay: .05s;
-  border: 1x solid DarkSlateGray !important;
-  border-radius: 50%;
   padding:10px;
+  background-color: none;
 }
 
 ul.social-new li a:hover {
@@ -1555,9 +1556,8 @@ ul.social-new li a:hover {
     transition: .3s all linear;
     transition-delay: .05s;
     color: black !important;
-    border: 1x solid black !important;
-    border-radius: 50%;
  padding:10px;
+ background-color: none;
 }
 
 ul.social-new li a.fa-twitter  {
@@ -1817,7 +1817,7 @@ div.pcaption:before {
 	color: #3c3838;
 	word-spacing: 10px;
 	padding: 10px;
-	height: 200px;
+	height: 100px;
 	letter-spacing: 2rem;
 	text-align: center;
 }
@@ -1838,17 +1838,21 @@ ol {
 }
 
 .latest-title a {
-	padding: 15px;
-	font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+	padding: 10px;
+	font-family: Arial, sans-serif;
 	font-style: normal;
 	color: #31180c;
 	text-transform: uppercase;
-	font-size:4rem;
+	font-size:3.5rem;
 	/*text-shadow: 2px 2px 2px rgba(81,81,81,0.5);*/
 	margin-top:-30px;
 	text-align:left;
 	color: #fff;
 	font-weight: 400;
+	padding-left:50px;
+	margin-left: -40px;
+	padding-top: 50px;
+	background-color: rgba(100,100,110,0.2);
 }
 
 .latest-title a:hover {
@@ -1858,8 +1862,8 @@ ol {
 a span.sitenamespan {
 	padding:0;
 	margin:0;
-	line-height:.5em;
-	position:relative;;
+	line-height:0.5em;
+	position:relative;
 	color:rgba(230,230,230,0.75);
 	vertical-align:top;
 	transition: 0.4s linear;
@@ -1893,7 +1897,7 @@ a span.fa.fa-caret-square-o-down {
 
 a:hover span.fa.fa-caret-square-o-down {
 	vertical-align: top;
-	color: gold;
+	color: #818273;
 	padding-left:10px;
 	vertical-align: top;
 	font-size: .6em;
@@ -1909,7 +1913,7 @@ a span.fa.fa-caret-square-o-down.post {
 }
 
 a:hover span.fa.fa-caret-square-o-down.post {
-	color: gold;
+	color: #818273;
 	padding-left:8px;
 	font-size: 1.4em;
 	transition: 0.4s linear;
@@ -1952,7 +1956,7 @@ a i.fa.fa-dot-circle-o {
 }
 
 a:hover i.fa.fa-dot-circle-o {
-	color: gold;
+	color: #818273;
 	padding-left:8px;
 	font-size: 1em;
 	transition: 0.4s linear;
@@ -1988,7 +1992,7 @@ a:hover span.sitenamespan.mirror {
     -animation-iteration-count: 1;
     -webkit-animation: initial;
     transition: 0.4s linear;
-    color: gold;
+    color: #818273;
 }
 
 

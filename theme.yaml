@@ -15,6 +15,10 @@ mobile_css_path: /_themes/mckinley/css/mobile.css
 disqus_account: jamesacampbell
 show_comments: no
 
+# NAVIGATION MENU TWEAKS
+# hidden pages are pages you created but don't want to show up in the navigation menu separate with pipe |
+hidden_pages: copyright-info|survival-guide|exhibitions-press|shop|aperfectsunset|twitter-custom-feeds|subscribe|downloads
+
 # HOME PAGE TWEAKS
 site_titler: true # if set to true, your title will be whatever you put below, make sure to keep the sitenamespan class
 # example <span class='sitenamespan'>My Cool Statamic Blog</span>
@@ -30,7 +34,7 @@ wot_code: 3e07f7bccd6342712770
 meta_desc_on: true
 meta_desc: The gallery and writings of James Campbell, who is based in Washington DC and writes code, designs, and takes pictures. He enjoys helping creatives, executives, and entrepreneurs learn how to fish instead of continuing to allow them to pay people to catch it for them.
 
-# meta author tag
+# meta author tag HTML5 SEO
 meta_auth_on: true
 meta_auth: James Campbell
 
@@ -79,7 +83,7 @@ feed_link: http://feed.j1c.us/jamescampbell
 # copyright done right, always a good idea to have a copyright page, but you can set it to false to turn it off
 copyright_on: true
 copyright_info: All Rights Reserved James Campbell. All content subject to Copyright.
-copyright_details_link: https://jamescampbell.us/copyright-info
+copyright_details_link: http://jamescampbell.us/copyright-info
 
 # me section displayed at bottom before menu on post pages only
 mee: true
